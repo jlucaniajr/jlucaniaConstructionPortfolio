@@ -22,8 +22,7 @@
     <p class="eyebrow">Construction & Carpentry Portfolio</p>
     <h1>Jack Lucania</h1>
     <p class="intro">
-      Hands-on construction and carpentry work focused on framing, repairs,
-      installs, finish work, and general on-site labor.
+      Diverse portfolio of projects highlighting skills in framing, trim work, and general labor, with a strong commitment to quality and attention to detail.
     </p>
 
     <a href="https://www.linkedin.com/in/john-lucania-jr" target="_blank" rel="noopener noreferrer">
@@ -56,9 +55,7 @@
         <div class="filter-bar">
           <button class="filter-btn active" data-filter="all">All</button>
           <button class="filter-btn" data-filter="framing">Framing</button>
-          <button class="filter-btn" data-filter="repairs">Repairs</button>
           <button class="filter-btn" data-filter="trim">Trim / Finish</button>
-          <button class="filter-btn" data-filter="decks">Decks</button>
           <button class="filter-btn" data-filter="labor">General Labor</button>
         </div>
       </div>
@@ -67,71 +64,56 @@
     <section id="portfolio" class="gallery-section section">
       <div class="container">
         <div class="gallery">
-          <article class="card" data-category="decks repairs">
-            <img src="images/project1.jpg" alt="Deck repair project" class="gallery-img" />
+          <article class="card" data-category="framing trim labor" data-project="outdoor-bar">
+            <img src="images/Construction/barblackrepaint.JPG" alt="Outdoor bar" class="gallery-img" />
             <div class="card-content">
-              <h3>Deck Repair</h3>
+              <h3>Outdoor Bar</h3>
               <p>
-                Removed damaged boards, measured and cut replacements, installed
-                new pieces, and cleaned the work area.
+                Description
               </p>
             </div>
           </article>
 
-          <article class="card" data-category="trim">
-            <img src="images/project2.jpg" alt="Trim installation project" class="gallery-img" />
+          <article class="card" data-category="trim" data-project="folding-table">
+            <img src="images/Construction/dyetablebeforecutting.JPG" alt="Trim installation project" class="gallery-img" />
             <div class="card-content">
-              <h3>Trim Installation</h3>
+              <h3>Folding Table</h3>
               <p>
-                Measured, cut, and installed trim pieces with attention to fit,
-                alignment, and clean finish.
+                Description
               </p>
             </div>
           </article>
 
-          <article class="card" data-category="framing labor">
-            <img src="images/project3.jpg" alt="Framing project" class="gallery-img" />
+          <article class="card" data-category="trim labor" data-project="greek-letters">
+            <img src="images/Construction/lettershungclose.JPG" alt="Greek letters project" class="gallery-img" />
             <div class="card-content">
-              <h3>Wall Framing</h3>
+              <h3>Greek Letters</h3>
               <p>
-                Assisted with layout, cutting, assembly, and setup for a basic
-                framing project on site.
+                Description
               </p>
             </div>
           </article>
 
-          <article class="card" data-category="repairs labor">
-            <img src="images/project4.jpg" alt="General repair project" class="gallery-img" />
+          <article class="card" data-category="trim" data-project="poker-table">
+            <img src="images/Construction/pokertablestained.JPG" alt="Poker table project" class="gallery-img" />
             <div class="card-content">
-              <h3>General Repair Work</h3>
+              <h3>Poker Table</h3>
               <p>
-                Completed demolition, prep, material handling, repair work, and
-                cleanup across multiple tasks.
+                Description
               </p>
             </div>
           </article>
 
-          <article class="card" data-category="decks labor">
-            <img src="images/project5.jpg" alt="Deck build project" class="gallery-img" />
+          <article class="card" data-category="labor" data-project="backyard-purgola">
+            <img src="images/Construction/purgolafarshot.jpg" alt="Backyard Purgola project" class="gallery-img" />
             <div class="card-content">
-              <h3>Deck Build Support</h3>
+              <h3>Backyard Purgola</h3>
               <p>
-                Helped with material movement, fastening, installation, and site
-                organization during a deck project.
+                Description
               </p>
             </div>
           </article>
 
-          <article class="card" data-category="trim repairs">
-            <img src="images/project6.jpg" alt="Finish repair work" class="gallery-img" />
-            <div class="card-content">
-              <h3>Finish Repair</h3>
-              <p>
-                Repaired worn finish areas and improved appearance through
-                careful replacement and detail work.
-              </p>
-            </div>
-          </article>
         </div>
       </div>
     </section>
@@ -140,13 +122,31 @@
   <footer class="site-footer" id="contact">
   <div class="container footer-content">
     <p>Jack Lucania | Construction Portfolio</p>
-    <p>Email: youremail@example.com</p>
+    <p>Email: jlucaniajr@gmail.com</p>
+    <p>Cell: (224) 619-8155</p>
   </div>
 </footer>
 
   <div class="lightbox" id="lightbox">
-    <span class="lightbox-close" id="lightboxClose">&times;</span>
-    <img class="lightbox-image" id="lightboxImage" src="" alt="Expanded project image" />
+    <div class="lightbox-panel">
+      <button class="lightbox-close" id="lightboxClose" type="button">&times;</button>
+
+      <div class="lightbox-info">
+  <h2 id="modalTitle"></h2>
+</div>
+
+<div class="lightbox-viewer">
+  <button class="lightbox-nav" id="prevImage" type="button">&#8249;</button>
+  <img class="lightbox-image" id="lightboxImage" src="" alt="Expanded project image" />
+  <button class="lightbox-nav" id="nextImage" type="button">&#8250;</button>
+</div>
+
+<div class="lightbox-description">
+  <p id="modalDescription"></p>
+</div>
+
+      <div class="lightbox-counter" id="imageCounter"></div>
+    </div>
   </div>
 
   <script src="script.js"></script>
