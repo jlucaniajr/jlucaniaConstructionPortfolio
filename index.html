@@ -8,22 +8,34 @@
 </head>
 <body>
   <header class="hero">
-    <div class="container">
-      <p class="eyebrow">Construction & Carpentry Portfolio</p>
-      <h1>Jack Lucania</h1>
-      <p class="intro">
-        Hands-on construction and carpentry work focused on framing, repairs,
-        installs, finish work, and general on-site labor.
-      </p>
-
-      <img src="images/profile.jpg" alt="Jack Lucania profile picture" class="profile-pic" />
-
-      <div class="hero-buttons">
-        <a href="#portfolio" class="btn btn-primary">View Work</a>
-        <a href="mailto:youremail@example.com" class="btn btn-secondary">Contact</a>
-      </div>
+  <div class="hero-bg" aria-hidden="true">
+    <div class="hero-row hero-row-top">
+      <div class="hero-track" id="heroTrackTop"></div>
     </div>
-  </header>
+
+    <div class="hero-row hero-row-bottom">
+      <div class="hero-track hero-track-bottom" id="heroTrackBottom"></div>
+    </div>
+  </div>
+
+  <div class="container hero-content">
+    <p class="eyebrow">Construction & Carpentry Portfolio</p>
+    <h1>Jack Lucania</h1>
+    <p class="intro">
+      Hands-on construction and carpentry work focused on framing, repairs,
+      installs, finish work, and general on-site labor.
+    </p>
+
+    <a href="https://www.linkedin.com/in/john-lucania-jr" target="_blank" rel="noopener noreferrer">
+      <img src="images/profile.jpg" alt="Jack Lucania profile picture" class="profile-pic" />
+    </a>
+
+    <div class="hero-buttons">
+      <a href="#portfolio" class="btn btn-primary">View Work</a>
+      <a href="#contact" class="btn btn-secondary">Contact</a>
+    </div>
+  </div>
+</header>
 
   <main>
     <section class="about section">
@@ -125,12 +137,12 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-content">
-      <p>Jack Lucania | Construction Portfolio</p>
-      <p>Email: youremail@example.com</p>
-    </div>
-  </footer>
+  <footer class="site-footer" id="contact">
+  <div class="container footer-content">
+    <p>Jack Lucania | Construction Portfolio</p>
+    <p>Email: youremail@example.com</p>
+  </div>
+</footer>
 
   <div class="lightbox" id="lightbox">
     <span class="lightbox-close" id="lightboxClose">&times;</span>
