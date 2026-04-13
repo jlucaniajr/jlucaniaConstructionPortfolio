@@ -31,7 +31,7 @@ img {
 }
 
 .narrow {
-  width: min(800px, 92%);
+  width: min(1100, 92%);
 }
 
 .section {
@@ -193,7 +193,7 @@ img {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 351px));
   gap: 24px;
 }
 
