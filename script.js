@@ -334,6 +334,41 @@ if (contactBtn) {
   });
 }
 
+function addImageSpinners() {
+  const images = document.querySelectorAll(".gallery-img, .hero-track img");
+
+  images.forEach(img => {
+    // Skip if already wrapped
+    if (img.parentElement.classList.contains("img-wrap")) return;
+
+    const wrapper = document.createElement("div");
+    wrapper.className = "img-wrap";
+
+    const spinner = document.createElement("div");
+    spinner.className = "img-spinner";
+
+    img.parentNode.insertBefore(wrapper, img);
+    wrapper.appendChild(spinner);
+    wrapper.appendChild(img);
+
+    // Handle load
+    if (img.complete) {
+      wrapper.classList.add("loaded");
+    } else {
+      img.addEventListener("load", () => {
+        wrapper.classList.add("loaded");
+      });
+
+      img.addEventListener("error", () => {
+        wrapper.classList.add("loaded");
+      });
+    }
+  });
+}
+
+// Run after DOM + dynamic images load
+window.addEventListener("load", addImageSpinners);
+
 // Run on load
 populateTrack("heroTrackTop");
 populateTrack("heroTrackBottom");
