@@ -36,16 +36,16 @@ const projectData = {
     description:
       "Refinished an outdoor bar setup with repainting and cleanup work to improve the look and durability of the structure.",
     images: [
-      "images/Construction/barblackrepaint.JPG",
-      "images/Construction/barfinishedconstruction.JPG",
+      "images/Construction/barblackrepaint.jpg",
+      "images/Construction/barfinishedconstruction.jpg",
       "images/Construction/barframing.jpg",
       "images/Construction/barframing2.jpg",
-      "images/Construction/barinshed.JPG",
-      "images/Construction/barmappingbeerboxes.JPG",
-      "images/Construction/barshedwork.JPG",
-      "images/Construction/barwithepoxydrying.JPG",
-      "images/Construction/barwithepoxydrying2.JPG",
-      "images/Construction/barwithepoxydryingfar.JPG"
+      "images/Construction/barinshed.jpg",
+      "images/Construction/barmappingbeerboxes.jpg",
+      "images/Construction/barshedwork.jpg",
+      "images/Construction/barwithepoxydrying.jpg",
+      "images/Construction/barwithepoxydrying2.jpg",
+      "images/Construction/barwithepoxydryingfar.jpg"
     ]
   },
   "folding-table": {
@@ -53,13 +53,13 @@ const projectData = {
     description:
       "Worked on a folding table project involving cutting prep, layout, and finish details.",
     images: [
-      "images/Construction/dyetablebeforecutting.JPG",
-      "images/Construction/dyetableclamps.JPG",
+      "images/Construction/dyetablebeforecutting.jpg",
+      "images/Construction/dyetableclamps.jpg",
       "images/Construction/dyetablefinishedpainting.jpg",
-      "images/Construction/dyetablefull.JPG",
-      "images/Construction/dyetabletapeoutlines.JPG",
-      "images/Construction/dyetablewithpoly.JPG",
-      "images/Construction/dyetablewithpoly2.JPG"
+      "images/Construction/dyetablefull.jpg",
+      "images/Construction/dyetabletapeoutlines.jpg",
+      "images/Construction/dyetablewithpoly.jpg",
+      "images/Construction/dyetablewithpoly2.jpg"
     ]
   },
   "greek-letters": {
@@ -67,9 +67,9 @@ const projectData = {
     description:
       "Mounted and positioned Greek letters with attention to spacing, alignment, and a clean final presentation.",
     images: [
-      "images/Construction/lettershungclose.JPG",
-      "images/Construction/lettershung1.JPG",
-      "images/Construction/lettershung2.JPG"
+      "images/Construction/lettershungclose.jpg",
+      "images/Construction/lettershung1.jpg",
+      "images/Construction/lettershung2.jpg"
     ]
   },
   "poker-table": {
@@ -77,10 +77,10 @@ const projectData = {
     description:
       "Finished a poker table project with staining and surface detail work for a polished final appearance.",
     images: [
-      "images/Construction/pokertablestained.JPG",
-      "images/Construction/pokertableplanning.JPG",
-      "images/Construction/pokertablepaintedchipholders.JPG",
-      "images/Construction/pokertabledrying.JPG"
+      "images/Construction/pokertablestained.jpg",
+      "images/Construction/pokertableplanning.jpg",
+      "images/Construction/pokertablepaintedchipholders.jpg",
+      "images/Construction/pokertabledrying.jpg"
     ]
   },
   "backyard-purgola": {
@@ -166,35 +166,35 @@ document.addEventListener("keydown", (e) => {
 });
 
 const constructionImages = [
-  "images/Construction/barafterfinishingtop.JPG",
-  "images/Construction/barbeingrefinished.JPG",
-  "images/Construction/barblackrepaint.JPG",
-  "images/Construction/barfinishedconstruction.JPG",
+  "images/Construction/barafterfinishingtop.jpg",
+  "images/Construction/barbeingrefinished.jpg",
+  "images/Construction/barblackrepaint.jpg",
+  "images/Construction/barfinishedconstruction.jpg",
   "images/Construction/barframing.jpg",
   "images/Construction/barframing2.jpg",
-  "images/Construction/barinshed.JPG",
-  "images/Construction/barmappingbeerboxes.JPG",
-  "images/Construction/barshedwork.JPG",
-  "images/Construction/barwithepoxydrying.JPG",
-  "images/Construction/barwithepoxydrying2.JPG",
-  "images/Construction/barwithepoxydryingfar.JPG",
+  "images/Construction/barinshed.jpg",
+  "images/Construction/barmappingbeerboxes.jpg",
+  "images/Construction/barshedwork.jpg",
+  "images/Construction/barwithepoxydrying.jpg",
+  "images/Construction/barwithepoxydrying2.jpg",
+  "images/Construction/barwithepoxydryingfar.jpg",
 
-  "images/Construction/dyetablebeforecutting.JPG",
-  "images/Construction/dyetableclamps.JPG",
+  "images/Construction/dyetablebeforecutting.jpg",
+  "images/Construction/dyetableclamps.jpg",
   "images/Construction/dyetablefinishedpainting.jpg",
-  "images/Construction/dyetablefull.JPG",
-  "images/Construction/dyetabletapeoutlines.JPG",
-  "images/Construction/dyetablewithpoly.JPG",
-  "images/Construction/dyetablewithpoly2.JPG",
+  "images/Construction/dyetablefull.jpg",
+  "images/Construction/dyetabletapeoutlines.jpg",
+  "images/Construction/dyetablewithpoly.jpg",
+  "images/Construction/dyetablewithpoly2.jpg",
 
-  "images/Construction/lettershung1.JPG",
-  "images/Construction/lettershung2.JPG",
-  "images/Construction/lettershungclose.JPG",
+  "images/Construction/lettershung1.jpg",
+  "images/Construction/lettershung2.jpg",
+  "images/Construction/lettershungclose.jpg",
 
-  "images/Construction/pokertabledrying.JPG",
-  "images/Construction/pokertablepaintedchipholders.JPG",
-  "images/Construction/pokertableplanning.JPG",
-  "images/Construction/pokertablestained.JPG",
+  "images/Construction/pokertabledrying.jpg",
+  "images/Construction/pokertablepaintedchipholders.jpg",
+  "images/Construction/pokertableplanning.jpg",
+  "images/Construction/pokertablestained.jpg",
 
   "images/Construction/purgolacloseshot.jpg",
   "images/Construction/purgolafarshot.jpg"
