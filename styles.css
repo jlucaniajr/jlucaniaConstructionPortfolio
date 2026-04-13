@@ -193,7 +193,7 @@ img {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 350px));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
 }
 
@@ -203,6 +203,7 @@ img {
   overflow: hidden;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  max-width: 350px;
 }
 
 .card:hover {
