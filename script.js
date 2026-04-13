@@ -334,24 +334,23 @@ if (contactBtn) {
   });
 }
 
-function addImageSpinners() {
+function addImageLoadIndicators() {
   const images = document.querySelectorAll(".gallery-img, .hero-track img");
 
   images.forEach(img => {
-    // Skip if already wrapped
     if (img.parentElement.classList.contains("img-wrap")) return;
 
     const wrapper = document.createElement("div");
     wrapper.className = "img-wrap";
 
-    const spinner = document.createElement("div");
-    spinner.className = "img-spinner";
+    const label = document.createElement("div");
+    label.className = "img-loading-text";
+    label.textContent = "LOADING";
 
     img.parentNode.insertBefore(wrapper, img);
-    wrapper.appendChild(spinner);
+    wrapper.appendChild(label);
     wrapper.appendChild(img);
 
-    // Handle load
     if (img.complete) {
       wrapper.classList.add("loaded");
     } else {
@@ -366,8 +365,7 @@ function addImageSpinners() {
   });
 }
 
-// Run after DOM + dynamic images load
-window.addEventListener("load", addImageSpinners);
+window.addEventListener("load", addImageLoadIndicators);
 
 // Run on load
 populateTrack("heroTrackTop");
