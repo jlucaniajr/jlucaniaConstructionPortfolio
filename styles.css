@@ -415,3 +415,60 @@ img {
     max-height: 50vh;
   }
 }
+
+.contact-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.contact-modal.show {
+  display: flex;
+}
+
+.contact-modal-content {
+  background: white;
+  color: #1f1f1f;
+  width: min(420px, 92vw);
+  border-radius: 14px;
+  padding: 24px;
+  position: relative;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+  text-align: center;
+}
+
+.contact-modal-content h2 {
+  margin-bottom: 18px;
+}
+
+.contact-modal-content a {
+  display: block;
+  margin: 12px 0;
+  color: #9b6b3d;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-modal-content a:hover {
+  text-decoration: underline;
+}
+
+.contact-close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  border: none;
+  background: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #1f1f1f;
+}
+
+#footerTrigger {
+  cursor: pointer;
+}

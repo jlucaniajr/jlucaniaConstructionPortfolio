@@ -287,6 +287,53 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
   });
 });
 
+const contactModal = document.getElementById("contactModal");
+const contactClose = document.getElementById("contactClose");
+const footerTrigger = document.getElementById("footerTrigger");
+
+if (footerTrigger && contactModal) {
+  footerTrigger.addEventListener("click", () => {
+    contactModal.classList.add("show");
+  });
+}
+
+contactClose.addEventListener("click", () => {
+  contactModal.classList.remove("show");
+});
+
+contactModal.addEventListener("click", (e) => {
+  if (e.target === contactModal) {
+    contactModal.classList.remove("show");
+  }
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    contactModal.classList.remove("show");
+  }
+});
+
+const contactBtn = document.getElementById("contactBtn");
+
+if (contactBtn) {
+  contactBtn.addEventListener("click", (e) => {
+    e.preventDefault(); // stop default anchor jump
+
+    const footer = document.getElementById("contact");
+
+    // smooth scroll manually
+    footer.scrollIntoView({ behavior: "smooth" });
+
+    // open modal after delay
+    setTimeout(() => {
+      contactModal.classList.add("show");
+    }, 400);
+
+    // remove hash from URL so refresh doesn't jump
+    history.replaceState(null, null, " ");
+  });
+}
+
 // Run on load
 populateTrack("heroTrackTop");
 populateTrack("heroTrackBottom");
