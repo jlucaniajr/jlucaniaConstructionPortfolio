@@ -25,6 +25,11 @@ img {
   display: block;
 }
 
+.about p {
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
+}
+
 .container {
   width: min(1100px, 92%);
   margin: 0 auto;
