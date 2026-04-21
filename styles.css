@@ -60,6 +60,7 @@ img {
   position: absolute;
   left: 0;
   width: 100%;
+  height: 225px; /* 👈 match image height */
   overflow: hidden;
 }
 
@@ -74,9 +75,9 @@ img {
 .hero-track img {
   width: 300px;
   height: 225px;
-  object-fit: cover;
+  object-fit: cover; /* crops instead of stretching */
   flex: 0 0 auto;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.28);
+  display: block;
 }
 
 .hero-content {
@@ -95,13 +96,14 @@ img {
 
 .hero-track {
   display: flex;
+  align-items: center; /* 👈 prevents vertical wobble */
   gap: 100px;
   width: max-content;
-  animation: scroll-left 200s linear infinite;
+  animation: scroll-left 400s linear infinite;
 }
 
 .hero-row-bottom .hero-track {
-  animation-delay: -50s; /* half of 200s */
+  animation-delay: -7s; /* half of 200s */
 }
 
 .eyebrow {
@@ -384,13 +386,13 @@ img {
     min-height: 60vh;
   }
 
-  .card img {
-    height: 220px;
+  .hero-track img {
+    width: clamp(140px, 38vw, 220px);
+    aspect-ratio: 4 / 3;
   }
 
-  .hero-track img {
-    width: 50px;
-    height: 40px;
+  .card img {
+    height: 220px;
   }
 
   .profile-pic {

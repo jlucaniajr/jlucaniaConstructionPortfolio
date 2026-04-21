@@ -1,6 +1,57 @@
 const filterButtons = document.querySelectorAll(".filter-btn");
 const cards = document.querySelectorAll(".card");
 
+const heroImages = [
+  "images/Construction/barafterfinishingtop.jpg",
+  "images/Construction/barbeingrefinished.jpg",
+  "images/Construction/barblackrepaint.jpg",
+  "images/Construction/barfinishedconstruction.jpg",
+  "images/Construction/barframing.jpg",
+  "images/Construction/barframing2.jpg",
+  "images/Construction/barinshed.jpg",
+  "images/Construction/barmappingbeerboxes.jpg",
+  "images/Construction/barshedwork.jpg",
+  "images/Construction/barwithepoxydrying.jpg",
+  "images/Construction/barwithepoxydrying2.jpg",
+  "images/Construction/barwithepoxydryingfar.jpg",
+  "images/Construction/dyetablebeforecutting.jpg",
+  "images/Construction/dyetableclamps.jpg",
+  "images/Construction/dyetablefinishedpainting.jpg",
+  "images/Construction/dyetablefull.jpg",
+  "images/Construction/dyetabletapeoutlines.jpg",
+  "images/Construction/dyetablewithpoly.jpg",
+  "images/Construction/dyetablewithpoly2.jpg",
+  "images/Construction/lettershung1.jpg",
+  "images/Construction/lettershung2.jpg",
+  "images/Construction/lettershungclose.jpg",
+  "images/Construction/pokertabledrying.jpg",
+  "images/Construction/pokertablepaintedchipholders.jpg",
+  "images/Construction/pokertableplanning.jpg",
+  "images/Construction/pokertablestained.jpg",
+  "images/Construction/purgolacloseshot.jpg",
+  "images/Construction/purgolafarshot.jpg"
+];
+
+function buildHeroTrack(trackId, reverse = false) {
+  const track = document.getElementById(trackId);
+  if (!track) return;
+
+  const images = reverse ? [...heroImages].reverse() : heroImages;
+
+  // duplicate for seamless scroll loop
+  const fullSet = images.concat(images);
+
+  track.innerHTML = fullSet
+    .map(src => `<img src="${src}" alt="">`)
+    .join("");
+}
+
+// top row
+buildHeroTrack("heroTrackTop");
+
+// bottom row (reverse for visual variety)
+buildHeroTrack("heroTrackBottom", true);
+
 filterButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const filter = button.dataset.filter;
@@ -17,16 +68,6 @@ filterButtons.forEach((button) => {
         card.classList.add("hidden");
       }
     });
-  });
-});
-
-const galleryImages = document.querySelectorAll(".gallery-img");
-
-galleryImages.forEach((image) => {
-  image.addEventListener("click", () => {
-    lightboxImage.src = image.src;
-    lightboxImage.alt = image.alt;
-    lightbox.classList.add("show");
   });
 });
 
@@ -149,147 +190,28 @@ document.querySelectorAll(".card[data-project]").forEach((card) => {
   });
 });
 
-lightboxClose.addEventListener("click", closeProject);
-prevImage.addEventListener("click", showPrevImage);
-nextImage.addEventListener("click", showNextImage);
+if (lightboxClose) lightboxClose.addEventListener("click", closeProject);
+if (prevImage) prevImage.addEventListener("click", showPrevImage);
+if (nextImage) nextImage.addEventListener("click", showNextImage);
 
-lightbox.addEventListener("click", (e) => {
-  if (e.target === lightbox) closeProject();
-});
+if (lightbox) {
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) closeProject();
+  });
+}
 
 document.addEventListener("keydown", (e) => {
-  if (!lightbox.classList.contains("show")) return;
+  if (!lightbox || !lightbox.classList.contains("show")) return;
 
   if (e.key === "Escape") closeProject();
   if (e.key === "ArrowLeft") showPrevImage();
   if (e.key === "ArrowRight") showNextImage();
 });
 
-const constructionImages = [
-  "images/Construction/barafterfinishingtop.jpg",
-  "images/Construction/barbeingrefinished.jpg",
-  "images/Construction/barblackrepaint.jpg",
-  "images/Construction/barfinishedconstruction.jpg",
-  "images/Construction/barframing.jpg",
-  "images/Construction/barframing2.jpg",
-  "images/Construction/barinshed.jpg",
-  "images/Construction/barmappingbeerboxes.jpg",
-  "images/Construction/barshedwork.jpg",
-  "images/Construction/barwithepoxydrying.jpg",
-  "images/Construction/barwithepoxydrying2.jpg",
-  "images/Construction/barwithepoxydryingfar.jpg",
-
-  "images/Construction/dyetablebeforecutting.jpg",
-  "images/Construction/dyetableclamps.jpg",
-  "images/Construction/dyetablefinishedpainting.jpg",
-  "images/Construction/dyetablefull.jpg",
-  "images/Construction/dyetabletapeoutlines.jpg",
-  "images/Construction/dyetablewithpoly.jpg",
-  "images/Construction/dyetablewithpoly2.jpg",
-
-  "images/Construction/lettershung1.jpg",
-  "images/Construction/lettershung2.jpg",
-  "images/Construction/lettershungclose.jpg",
-
-  "images/Construction/pokertabledrying.jpg",
-  "images/Construction/pokertablepaintedchipholders.jpg",
-  "images/Construction/pokertableplanning.jpg",
-  "images/Construction/pokertablestained.jpg",
-
-  "images/Construction/purgolacloseshot.jpg",
-  "images/Construction/purgolafarshot.jpg"
-];
-
-// Shuffle function
-function shuffle(array) {
-  return array.sort(() => Math.random() - 0.5);
-}
-
-// Fill a track with random images
-function populateTrack(trackId) {
-  const track = document.getElementById(trackId);
-  const shuffled = shuffle([...constructionImages]);
-
-  shuffled.forEach(src => {
-    const img = document.createElement("img");
-    img.src = src;
-    img.alt = "";
-    track.appendChild(img);
-  });
-}
-
-document.querySelector('.btn-primary').addEventListener('click', function(e) {
-  e.preventDefault();
-
-  const target = document.querySelector('#portfolio');
-  const start = window.scrollY;
-  const end = target.offsetTop;
-  const distance = end - start;
-
-  const duration = 500;
-  let startTime = null;
-
-  function smoothScroll(timestamp) {
-    if (!startTime) startTime = timestamp;
-    const time = timestamp - startTime;
-
-    // smooth easing (this is what makes it feel nice)
-    const progress = easeInOutCubic(time / duration);
-    window.scrollTo(0, start + distance * progress);
-
-    if (time < duration) {
-      requestAnimationFrame(smoothScroll);
-    }
-  }
-
-  function easeInOutCubic(t) {
-    return t < 0.5
-      ? 4 * t * t * t
-      : 1 - Math.pow(-2 * t + 2, 3) / 2;
-  }
-
-  requestAnimationFrame(smoothScroll);
-});
-
-document.querySelectorAll('a[href^="#"]').forEach((link) => {
-  link.addEventListener('click', function (e) {
-    const target = document.querySelector(this.getAttribute('href'));
-    if (!target) return;
-
-    e.preventDefault();
-
-    const start = window.scrollY;
-    const end = target.getBoundingClientRect().top + window.pageYOffset;
-    const distance = end - start;
-    const duration = 500;
-    let startTime = null;
-
-    function easeInOutCubic(t) {
-      return t < 0.5
-        ? 4 * t * t * t
-        : 1 - Math.pow(-2 * t + 2, 3) / 2;
-    }
-
-    function animateScroll(timestamp) {
-      if (!startTime) startTime = timestamp;
-      const elapsed = timestamp - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-      const eased = easeInOutCubic(progress);
-
-      window.scrollTo(0, start + distance * eased);
-
-      if (elapsed < duration) {
-        requestAnimationFrame(animateScroll);
-      }
-    }
-
-    requestAnimationFrame(animateScroll);
-  });
-});
-
 const contactModal = document.getElementById("contactModal");
 const contactClose = document.getElementById("contactClose");
 const footerTrigger = document.getElementById("footerTrigger");
+const contactBtn = document.getElementById("contactBtn");
 
 if (footerTrigger && contactModal) {
   footerTrigger.addEventListener("click", () => {
@@ -297,76 +219,39 @@ if (footerTrigger && contactModal) {
   });
 }
 
-contactClose.addEventListener("click", () => {
-  contactModal.classList.remove("show");
-});
-
-contactModal.addEventListener("click", (e) => {
-  if (e.target === contactModal) {
+if (contactClose && contactModal) {
+  contactClose.addEventListener("click", () => {
     contactModal.classList.remove("show");
-  }
-});
-
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") {
-    contactModal.classList.remove("show");
-  }
-});
-
-const contactBtn = document.getElementById("contactBtn");
-
-if (contactBtn) {
-  contactBtn.addEventListener("click", (e) => {
-    e.preventDefault(); // stop default anchor jump
-
-    const footer = document.getElementById("contact");
-
-    // smooth scroll manually
-    footer.scrollIntoView({ behavior: "smooth" });
-
-    // open modal after delay
-    setTimeout(() => {
-      contactModal.classList.add("show");
-    }, 400);
-
-    // remove hash from URL so refresh doesn't jump
-    history.replaceState(null, null, " ");
   });
 }
 
-function addImageLoadIndicators() {
-  const images = document.querySelectorAll(".gallery-img, .hero-track img");
-
-  images.forEach(img => {
-    if (img.parentElement.classList.contains("img-wrap")) return;
-
-    const wrapper = document.createElement("div");
-    wrapper.className = "img-wrap";
-
-    const label = document.createElement("div");
-    label.className = "img-loading-text";
-    label.textContent = "LOADING";
-
-    img.parentNode.insertBefore(wrapper, img);
-    wrapper.appendChild(label);
-    wrapper.appendChild(img);
-
-    if (img.complete) {
-      wrapper.classList.add("loaded");
-    } else {
-      img.addEventListener("load", () => {
-        wrapper.classList.add("loaded");
-      });
-
-      img.addEventListener("error", () => {
-        wrapper.classList.add("loaded");
-      });
+if (contactModal) {
+  contactModal.addEventListener("click", (e) => {
+    if (e.target === contactModal) {
+      contactModal.classList.remove("show");
     }
   });
 }
 
-window.addEventListener("load", addImageLoadIndicators);
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && contactModal) {
+    contactModal.classList.remove("show");
+  }
+});
 
-// Run on load
-populateTrack("heroTrackTop");
-populateTrack("heroTrackBottom");
+if (contactBtn && contactModal) {
+  contactBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    const footer = document.getElementById("contact");
+    if (footer) {
+      footer.scrollIntoView({ behavior: "smooth" });
+    }
+
+    setTimeout(() => {
+      contactModal.classList.add("show");
+    }, 400);
+
+    history.replaceState(null, null, " ");
+  });
+}
