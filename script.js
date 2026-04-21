@@ -75,7 +75,7 @@ const projectData = {
   "outdoor-bar": {
     title: "Outdoor Bar",
     description:
-      "Refinished an outdoor bar setup with repainting and cleanup work to improve the look and durability of the structure.",
+      "Built and refinished a custom outdoor bar, including structural framing, surface prep, and final paintwork. Project involved restoring worn materials, ensuring stability, and delivering a clean, weather-resistant finish suitable for outdoor use.",
     images: [
       "images/Construction/barblackrepaint.jpg",
       "images/Construction/barfinishedconstruction.jpg",
@@ -92,7 +92,7 @@ const projectData = {
   "folding-table": {
     title: "Folding Table",
     description:
-      "Worked on a folding table project involving cutting prep, layout, and finish details.",
+      "Constructed and modified a folding table with precise cutting, trimming, and finishing work. Focused on clean edges, proper alignment, and durability while maintaining portability and ease of use.",
     images: [
       "images/Construction/dyetablebeforecutting.jpg",
       "images/Construction/dyetableclamps.jpg",
@@ -106,7 +106,7 @@ const projectData = {
   "greek-letters": {
     title: "Greek Letters",
     description:
-      "Mounted and positioned Greek letters with attention to spacing, alignment, and a clean final presentation.",
+      "Created and mounted Greek lettering with careful attention to spacing, alignment, and secure fastening. Work required precision measuring, surface prep, and clean finish detail to ensure a professional appearance.",
     images: [
       "images/Construction/lettershungclose.jpg",
       "images/Construction/lettershung1.jpg",
@@ -116,7 +116,7 @@ const projectData = {
   "poker-table": {
     title: "Poker Table",
     description:
-      "Finished a poker table project with staining and surface detail work for a polished final appearance.",
+      "Built and finished a custom poker table, including sanding, staining, and detail work. Emphasis on smooth surfaces, consistent stain application, and overall craftsmanship to achieve a polished final product.",
     images: [
       "images/Construction/pokertablestained.jpg",
       "images/Construction/pokertableplanning.jpg",
@@ -127,7 +127,7 @@ const projectData = {
   "backyard-purgola": {
     title: "Backyard Purgola",
     description:
-      "Contributed labor and outdoor carpentry work on a backyard pergola-style structure, focusing on build support and finish details.",
+      "Assisted in the construction of a backyard pergola, supporting layout, material handling, and assembly. Contributed to structural setup and ensured accurate placement and stability throughout the build.",
     images: [
       "images/Construction/purgolafarshot.jpg",
       "images/Construction/purgolacloseshot.jpg"
