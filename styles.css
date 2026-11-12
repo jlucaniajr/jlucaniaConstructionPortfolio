@@ -15,7 +15,11 @@ html {
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: #f7f5f1;
+  background-color: #f7f5f1;
+  background-image:
+  linear-gradient(rgba(31, 42, 54, 0.05) 1px, transparent 1px),
+  linear-gradient(90deg, rgba(31, 42, 54, 0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
   color: #1f1f1f;
   line-height: 1.6;
 }
@@ -512,4 +516,34 @@ img {
 
 .img-wrap.loaded .img-loading-text {
   display: none;
+}
+
+/* About section as a solid warm band (covers the grid) */
+.about {
+  background-color: #ede6db;
+}
+
+/* Wood-brown accent bar under section headings */
+.about h2::after,
+.filters h2::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 4px;
+  margin-top: 8px;
+  background: #9b6b3d;
+  border-radius: 2px;
+}
+
+/* Footer matches the navy hero */
+.site-footer {
+  background: #1f2a36;
+}
+
+/* Pull the filter buttons closer to the gallery */
+.filters.section {
+  padding-bottom: 0;
+}
+.gallery-section.section {
+  padding-top: 28px;
 }
