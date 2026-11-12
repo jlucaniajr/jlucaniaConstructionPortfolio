@@ -521,6 +521,10 @@ img {
 /* About section as a solid warm band (covers the grid) */
 .about {
   background-color: #ede6db;
+  background-image:
+  linear-gradient(rgba(31, 42, 54, 0.05) 1px, transparent 1px),
+  linear-gradient(90deg, rgba(31, 42, 54, 0.05) 1px, transparent 1px);
+  background-size: 100% 100%, 32px 32px, 32px 32px;
 }
 
 /* Wood-brown accent bar under section headings */
